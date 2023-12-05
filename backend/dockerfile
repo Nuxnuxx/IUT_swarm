@@ -1,0 +1,24 @@
+# Utilisation d'une image node
+FROM node:18-alpine
+
+# Ajout de dumb init pour le PID 1
+RUN apk add dumb-init
+
+# Copie du package.json dans l'image
+COPY ./package.json /TP1/package.json
+WORKDIR /TP1/
+
+# Installe les dépendances
+RUN npm install
+
+# Copie du dossier d'application
+COPY . /TP1/
+
+# Exposition du port 8080
+EXPOSE 8080
+
+# Passage sur l'utilisateur node
+USER node
+
+# Lancement du serveur d'API
+CMD ["dumb-init", "node", "server.js"]

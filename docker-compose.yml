@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  backend:
+    build: ./backend/
+    restart: always
+    ports:
+      - 8080:8080
+  bdd:
+    image: mariadb:10.6-focal
+    restart: always
+    environment:
+      - MARIADB_ROOT_PASSWORD=lol
+    volumes:
+      - bdd:/var/lib/mysql
+  frontend1:
+    build: ./frontend/
+    restart: always
+    ports:
+      - 8081:80
+  frontend2:
+    build: ./frontend2/
+    restart: always
+    ports:
+      - 8082:80
