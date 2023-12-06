@@ -1,0 +1,20 @@
+# Application déploiement Docker Swarm
+
+Cette application a pour but d'être installé par les élèves de BUT 3 Informatique dans le cadre d'un déploiement via Docker Swarm.
+
+
+## Tech Stack
+
+**Client 1 :** Node, Vue JS
+
+**Client 2 :** Angular
+
+**Server :** Node, Express
+
+**Virtualisation :** Docker et Docker Swarm
+
+## Authors
+
+- [Renaud PERRAI](https://github.com/RenaudPERRAI) - Partie Docker
+- [BezKoder](https://github.com/bezkoder) - Partie code
+
