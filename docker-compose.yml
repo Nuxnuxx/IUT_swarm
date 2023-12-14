@@ -2,7 +2,7 @@ version: "3"
 
 services:
   backend:
-    image: swarm-backend
+    image: swarm_backend
     build: ./backend/
     ports:
       - 8080:8080
@@ -23,7 +23,7 @@ services:
         constraints:
           - node.role == manager
   frontend1:
-    image: swarm-frontend1
+    image: swarm_frontend1
     build: ./frontend/
     restart: always
     ports:
@@ -31,7 +31,7 @@ services:
     deploy:
       replicas: 3
   frontend2:
-    image: swarm-frontend2
+    image: swarm_frontend2
     build: ./frontend2/
     restart: always
     ports:
